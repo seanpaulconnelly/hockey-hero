@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"   # runs Parcel (or your chosen bundler) to create the production bundle
+  publish  = "dist"           # folder Netlify should deploy (created by the build command)
+
+# Optional: specify Node version used during the build
+[build.environment]
+  NODE_VERSION = "20"
+
+# Optional: redirect everything to index.html for single-page routing
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
